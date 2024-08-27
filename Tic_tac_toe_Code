@@ -1,0 +1,14 @@
+import pygame
+from tic_tac_toe_grid import Grid
+
+pygame.init()
+
+screen = pygame.display.set_mode((600,600))
+screen_width = 600
+screen_height = 600
+pygame.display.set_caption("Tic Tac Toe")
+
+run=True
+while run:
+    screen.fill((255,255,255))
+    pygame.display.update()
