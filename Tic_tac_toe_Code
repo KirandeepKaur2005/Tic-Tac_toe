@@ -1,14 +1,15 @@
 import pygame
-from tic_tac_toe_grid import Grid
 
-pygame.init()
+class Grid:
+    def __init__(self):
+        self.screen_height = 600
+        self.screen_height = 600
+        self.cell_size = 200
+        self.num_rows = 3
+        self.num_cols = 3
+        self.grid = [[0 for j in range(self.num_cols)] for i in range(self.num_rows)]
 
-screen = pygame.display.set_mode((600,600))
-screen_width = 600
-screen_height = 600
-pygame.display.set_caption("Tic Tac Toe")
-
-run=True
-while run:
-    screen.fill((255,255,255))
-    pygame.display.update()
+    def draw_grid(self,screen):
+        for i in range(0,6,2):
+            pygame.draw.line(screen, (0,0,0), (0, i * 100), (600, i * 100), 15)
+            pygame.draw.line(screen, (0,0,0), (i * 100, 0), (i * 100, 600), 15)  
