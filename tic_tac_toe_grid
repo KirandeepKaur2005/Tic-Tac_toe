@@ -1,0 +1,15 @@
+import pygame
+
+class Grid:
+    def __init__(self):
+        self.screen_height = 600
+        self.screen_height = 600
+        self.cell_size = 200
+        self.num_rows = 3
+        self.num_cols = 3
+        self.grid = [[0 for j in range(self.num_cols)] for i in range(self.num_rows)]
+
+    def draw_grid(self,screen):
+        for i in range(0,6,2):
+            pygame.draw.line(screen, (0,0,0), (0, i * 100), (600, i * 100), 15)
+            pygame.draw.line(screen, (0,0,0), (i * 100, 0), (i * 100, 600), 15)  
